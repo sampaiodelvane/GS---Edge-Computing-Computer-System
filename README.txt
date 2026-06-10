@@ -1,10 +1,10 @@
 ================================================================================
-PROJETO TERRAVISS - MONITORAMENTO DE RISCO DE INCÊNDIO
+PROJETO TERRAVIS - MONITORAMENTO DE RISCO DE INCÊNDIO
 ================================================================================
 
 1. DESCRIÇÃO DO PROJETO
 --------------------------------------------------------------------------------
-O TerraViss é um sistema de monitoramento ambiental baseado em Edge Computing, 
+O TerraVis é um sistema de monitoramento ambiental baseado em Edge Computing, 
 projetado para detectar condições propícias a incêndios florestais ou urbanos. 
 O sistema utiliza um modelo matemático exponencial para calcular o risco de 
 queimada em tempo real, fornecendo alertas visuais (LEDs), sonoros (Buzzer) 
