@@ -2,6 +2,8 @@
 PROJETO TERRAVIS - MONITORAMENTO DE RISCO DE INCÊNDIO
 ================================================================================
 
+Link do Pitch no YouTube: https://youtu.be/qYrZo2HZenk?si=e7MRB0lRa-BSY9L0
+
 1. DESCRIÇÃO DO PROJETO
 --------------------------------------------------------------------------------
 O TerraVis é um sistema de monitoramento ambiental baseado em Edge Computing, 
