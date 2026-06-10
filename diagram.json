@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "author": "TerraViss - Edge Computing",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0.6, "left": -0.6, "attrs": {} },
+    { "type": "wokwi-breadboard", "id": "bb1", "top": 200, "left": -100, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led_red",
+      "top": 111.6,
+      "left": 378.2,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_yellow",
+      "top": 111.6,
+      "left": 349.4,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_green",
+      "top": 111.6,
+      "left": 311,
+      "attrs": { "color": "green" }
+    },
+    { "type": "wokwi-buzzer", "id": "buzzer1", "top": 415.2, "left": -257.4, "attrs": {} },
+    { "type": "wokwi-tmp36", "id": "tmp36", "top": 430, "left": 300, "attrs": {} },
+    { "type": "wokwi-resistor", "id": "r1", "top": 230, "left": 200, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "r2", "top": 280, "left": 200, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "r3", "top": 330, "left": 200, "attrs": { "value": "220" } },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": 161.9,
+      "left": -259.4,
+      "attrs": { "label": "Sensor Fogo (A0)", "value": "0" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot2",
+      "top": 296.3,
+      "left": -259.4,
+      "attrs": { "label": "Sensor Fumaca (A1)", "value": "0" }
+    },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -150, "left": 0, "attrs": { "pins": "i2c" } }
+  ],
+  "connections": [
+    [ "uno:8", "r1:1", "red", [ "h0.4", "v226.05" ] ],
+    [ "r1:2", "led_red:A", "red", [] ],
+    [ "led_red:K", "uno:GND.2", "black", [] ],
+    [ "uno:9", "r2:1", "yellow", [ "h0.8", "v276.05" ] ],
+    [ "r2:2", "led_yellow:A", "yellow", [] ],
+    [ "led_yellow:K", "uno:GND.2", "black", [] ],
+    [ "uno:10", "r3:1", "green", [ "h0.7", "v326.05" ] ],
+    [ "r3:2", "led_green:A", "green", [] ],
+    [ "led_green:K", "uno:GND.2", "black", [] ],
+    [ "uno:11", "buzzer1:1", "blue", [ "h-441.6", "v490.2" ] ],
+    [ "buzzer1:2", "uno:GND.2", "black", [] ],
+    [ "uno:5V", "tmp36:VCC", "red", [] ],
+    [ "tmp36:GND", "uno:GND.2", "black", [] ],
+    [ "tmp36:OUT", "uno:A2", "orange", [] ],
+    [ "uno:5V", "pot1:VCC", "red", [] ],
+    [ "pot1:GND", "uno:GND.2", "black", [] ],
+    [ "pot1:SIG", "uno:A0", "purple", [ "v9.6", "h427.8" ] ],
+    [ "uno:5V", "pot2:VCC", "red", [] ],
+    [ "pot2:GND", "uno:GND.2", "black", [] ],
+    [ "pot2:SIG", "uno:A1", "brown", [] ],
+    [ "uno:A4", "lcd1:SDA", "yellow", [] ],
+    [ "uno:A5", "lcd1:SCL", "blue", [] ],
+    [ "uno:5V", "lcd1:VCC", "red", [] ],
+    [ "uno:GND.2", "lcd1:GND", "black", [] ],
+    [ "uno:GND.1", "bb1:tn.50", "black", [ "v-19.2", "h384.3" ] ],
+    [ "bb1:tn.34", "led_green:C", "green", [ "v0" ] ],
+    [ "bb1:tn.40", "led_red:C", "green", [ "v0" ] ],
+    [ "bb1:tn.37", "led_yellow:C", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
